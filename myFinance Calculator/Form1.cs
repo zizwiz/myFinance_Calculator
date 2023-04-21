@@ -2,6 +2,7 @@
 using System.Reflection;
 using System.Windows.Forms;
 using Financial_Calculator.algorithims;
+using myFinance_Calculator.algorithims;
 
 namespace Financial_Calculator
 {
@@ -55,6 +56,11 @@ namespace Financial_Calculator
         private void Form1_Load(object sender, EventArgs e)
         {
             Text += " : v" + Assembly.GetExecutingAssembly().GetName().Version; // put in the version number
+        }
+
+        private void btn_calculate_gross_to_aer_Click(object sender, EventArgs e)
+        {
+            lbl_gross_to_aer.Text = GrossToAER.CalculateGrossToAER();
         }
     }
 }

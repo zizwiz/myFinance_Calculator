@@ -58,10 +58,18 @@ namespace Financial_Calculator
             this.label5 = new System.Windows.Forms.Label();
             this.txtbx_value_now = new System.Windows.Forms.TextBox();
             this.txtbx_initial_investment = new System.Windows.Forms.TextBox();
+            this.tab_gross_tab = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btn_calculate_gross_to_aer = new System.Windows.Forms.Button();
+            this.txtbx_gross_int_rate = new System.Windows.Forms.TextBox();
+            this.txtbx_times_per_year = new System.Windows.Forms.TextBox();
+            this.lbl_gross_to_aer = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabpg_compound_interest.SuspendLayout();
             this.tabpg_investment_aer.SuspendLayout();
+            this.tab_gross_tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbx_invest_amount
@@ -225,6 +233,7 @@ namespace Financial_Calculator
             // 
             this.tabControl1.Controls.Add(this.tabpg_compound_interest);
             this.tabControl1.Controls.Add(this.tabpg_investment_aer);
+            this.tabControl1.Controls.Add(this.tab_gross_tab);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -340,6 +349,72 @@ namespace Financial_Calculator
             this.txtbx_initial_investment.Size = new System.Drawing.Size(230, 26);
             this.txtbx_initial_investment.TabIndex = 1;
             // 
+            // tab_gross_tab
+            // 
+            this.tab_gross_tab.Controls.Add(this.lbl_gross_to_aer);
+            this.tab_gross_tab.Controls.Add(this.txtbx_times_per_year);
+            this.tab_gross_tab.Controls.Add(this.txtbx_gross_int_rate);
+            this.tab_gross_tab.Controls.Add(this.btn_calculate_gross_to_aer);
+            this.tab_gross_tab.Controls.Add(this.label11);
+            this.tab_gross_tab.Controls.Add(this.label10);
+            this.tab_gross_tab.Location = new System.Drawing.Point(4, 29);
+            this.tab_gross_tab.Name = "tab_gross_tab";
+            this.tab_gross_tab.Size = new System.Drawing.Size(945, 637);
+            this.tab_gross_tab.TabIndex = 2;
+            this.tab_gross_tab.Text = "Gross to AER";
+            this.tab_gross_tab.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(50, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(150, 20);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Gross Interest Rate";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(50, 75);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(287, 20);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "How many times a year is interest paid?";
+            // 
+            // btn_calculate_gross_to_aer
+            // 
+            this.btn_calculate_gross_to_aer.Location = new System.Drawing.Point(487, 185);
+            this.btn_calculate_gross_to_aer.Name = "btn_calculate_gross_to_aer";
+            this.btn_calculate_gross_to_aer.Size = new System.Drawing.Size(120, 38);
+            this.btn_calculate_gross_to_aer.TabIndex = 2;
+            this.btn_calculate_gross_to_aer.Text = "Calculate";
+            this.btn_calculate_gross_to_aer.UseVisualStyleBackColor = true;
+            this.btn_calculate_gross_to_aer.Click += new System.EventHandler(this.btn_calculate_gross_to_aer_Click);
+            // 
+            // txtbx_gross_int_rate
+            // 
+            this.txtbx_gross_int_rate.Location = new System.Drawing.Point(417, 32);
+            this.txtbx_gross_int_rate.Name = "txtbx_gross_int_rate";
+            this.txtbx_gross_int_rate.Size = new System.Drawing.Size(167, 26);
+            this.txtbx_gross_int_rate.TabIndex = 3;
+            // 
+            // txtbx_times_per_year
+            // 
+            this.txtbx_times_per_year.Location = new System.Drawing.Point(417, 72);
+            this.txtbx_times_per_year.Name = "txtbx_times_per_year";
+            this.txtbx_times_per_year.Size = new System.Drawing.Size(167, 26);
+            this.txtbx_times_per_year.TabIndex = 4;
+            // 
+            // lbl_gross_to_aer
+            // 
+            this.lbl_gross_to_aer.AutoSize = true;
+            this.lbl_gross_to_aer.Location = new System.Drawing.Point(73, 185);
+            this.lbl_gross_to_aer.Name = "lbl_gross_to_aer";
+            this.lbl_gross_to_aer.Size = new System.Drawing.Size(104, 20);
+            this.lbl_gross_to_aer.TabIndex = 5;
+            this.lbl_gross_to_aer.Text = "GrossToAER";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -357,6 +432,8 @@ namespace Financial_Calculator
             this.tabpg_compound_interest.PerformLayout();
             this.tabpg_investment_aer.ResumeLayout(false);
             this.tabpg_investment_aer.PerformLayout();
+            this.tab_gross_tab.ResumeLayout(false);
+            this.tab_gross_tab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -391,6 +468,13 @@ namespace Financial_Calculator
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtbx_value_now;
         private System.Windows.Forms.TextBox txtbx_initial_investment;
+        private System.Windows.Forms.TabPage tab_gross_tab;
+        private System.Windows.Forms.TextBox txtbx_times_per_year;
+        private System.Windows.Forms.TextBox txtbx_gross_int_rate;
+        private System.Windows.Forms.Button btn_calculate_gross_to_aer;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_gross_to_aer;
     }
 }
 

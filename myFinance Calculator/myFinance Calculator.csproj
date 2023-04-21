@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="algorithims\CompoundInterest.cs" />
+    <Compile Include="algorithims\GrossToAER.cs" />
     <Compile Include="algorithims\ROI.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
