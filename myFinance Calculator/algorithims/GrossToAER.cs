@@ -28,7 +28,7 @@ namespace myFinance_Calculator.algorithims
 
 
 
-            return "Hello";
+            return                  ;
         }
 
 
