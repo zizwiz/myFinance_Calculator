@@ -60,7 +60,7 @@ namespace Financial_Calculator
 
         private void btn_calculate_gross_to_aer_Click(object sender, EventArgs e)
         {
-            lbl_gross_to_aer.Text = GrossToAER.CalculateGrossToAER();
+            lbl_gross_to_aer.Text = GrossToAER.CalculateGrossToAER(float.Parse(txtbx_gross_int_rate.Text), int.Parse(txtbx_times_per_year.Text)).ToString("0.##");
         }
     }
 }
