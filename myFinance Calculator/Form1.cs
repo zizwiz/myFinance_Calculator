@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using Financial_Calculator.algorithims;
 using myFinance_Calculator.algorithims;
+using myFinance_Calculator.utils;
 
 namespace Financial_Calculator
 {
@@ -62,5 +63,14 @@ namespace Financial_Calculator
         {
             lbl_gross_to_aer.Text = GrossToAER.CalculateGrossToAER(float.Parse(txtbx_gross_int_rate.Text), int.Parse(txtbx_times_per_year.Text)).ToString("0.##");
         }
+
+        private void btn_calc_loan_Click(object sender, EventArgs e)
+        {
+            lbl_monthly_repayments.Text = "£" + CalcLoanRepayments.CalculateMonthlyRepayments(Convert.ToDouble(txtbx_loan_amount.Text),
+                Convert.ToDouble(txtbx_interest_rate.Text),
+                Convert.ToDouble(txtbx_timespan.Text)).ToString("f2");
+        }
+
+        
     }
 }

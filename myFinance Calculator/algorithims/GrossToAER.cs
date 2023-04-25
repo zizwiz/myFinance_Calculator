@@ -26,8 +26,8 @@ namespace myFinance_Calculator.algorithims
              e.g 3.65% gross paid 4 times a year = 3.7% AER 
              
              */
-
             
+
             return (Math.Pow((1+((GrossIntRate/TimePerYear)/100)),TimePerYear)-1)*100;
         }
 

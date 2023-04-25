@@ -59,17 +59,27 @@ namespace Financial_Calculator
             this.txtbx_value_now = new System.Windows.Forms.TextBox();
             this.txtbx_initial_investment = new System.Windows.Forms.TextBox();
             this.tab_gross_tab = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btn_calculate_gross_to_aer = new System.Windows.Forms.Button();
-            this.txtbx_gross_int_rate = new System.Windows.Forms.TextBox();
-            this.txtbx_times_per_year = new System.Windows.Forms.TextBox();
             this.lbl_gross_to_aer = new System.Windows.Forms.Label();
+            this.txtbx_times_per_year = new System.Windows.Forms.TextBox();
+            this.txtbx_gross_int_rate = new System.Windows.Forms.TextBox();
+            this.btn_calculate_gross_to_aer = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tab_loan_repayments = new System.Windows.Forms.TabPage();
+            this.lbl_monthly_repayments = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtbx_timespan = new System.Windows.Forms.TextBox();
+            this.txtbx_interest_rate = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtbx_loan_amount = new System.Windows.Forms.TextBox();
+            this.btn_calc_loan = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabpg_compound_interest.SuspendLayout();
             this.tabpg_investment_aer.SuspendLayout();
             this.tab_gross_tab.SuspendLayout();
+            this.tab_loan_repayments.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbx_invest_amount
@@ -234,6 +244,7 @@ namespace Financial_Calculator
             this.tabControl1.Controls.Add(this.tabpg_compound_interest);
             this.tabControl1.Controls.Add(this.tabpg_investment_aer);
             this.tabControl1.Controls.Add(this.tab_gross_tab);
+            this.tabControl1.Controls.Add(this.tab_loan_repayments);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -364,23 +375,28 @@ namespace Financial_Calculator
             this.tab_gross_tab.Text = "Gross to AER";
             this.tab_gross_tab.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // lbl_gross_to_aer
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(50, 34);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 20);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Gross Interest Rate";
+            this.lbl_gross_to_aer.AutoSize = true;
+            this.lbl_gross_to_aer.Location = new System.Drawing.Point(73, 185);
+            this.lbl_gross_to_aer.Name = "lbl_gross_to_aer";
+            this.lbl_gross_to_aer.Size = new System.Drawing.Size(104, 20);
+            this.lbl_gross_to_aer.TabIndex = 5;
+            this.lbl_gross_to_aer.Text = "GrossToAER";
             // 
-            // label11
+            // txtbx_times_per_year
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(50, 75);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(287, 20);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "How many times a year is interest paid?";
+            this.txtbx_times_per_year.Location = new System.Drawing.Point(417, 72);
+            this.txtbx_times_per_year.Name = "txtbx_times_per_year";
+            this.txtbx_times_per_year.Size = new System.Drawing.Size(167, 26);
+            this.txtbx_times_per_year.TabIndex = 4;
+            // 
+            // txtbx_gross_int_rate
+            // 
+            this.txtbx_gross_int_rate.Location = new System.Drawing.Point(417, 32);
+            this.txtbx_gross_int_rate.Name = "txtbx_gross_int_rate";
+            this.txtbx_gross_int_rate.Size = new System.Drawing.Size(167, 26);
+            this.txtbx_gross_int_rate.TabIndex = 3;
             // 
             // btn_calculate_gross_to_aer
             // 
@@ -392,28 +408,107 @@ namespace Financial_Calculator
             this.btn_calculate_gross_to_aer.UseVisualStyleBackColor = true;
             this.btn_calculate_gross_to_aer.Click += new System.EventHandler(this.btn_calculate_gross_to_aer_Click);
             // 
-            // txtbx_gross_int_rate
+            // label11
             // 
-            this.txtbx_gross_int_rate.Location = new System.Drawing.Point(417, 32);
-            this.txtbx_gross_int_rate.Name = "txtbx_gross_int_rate";
-            this.txtbx_gross_int_rate.Size = new System.Drawing.Size(167, 26);
-            this.txtbx_gross_int_rate.TabIndex = 3;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(50, 75);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(287, 20);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "How many times a year is interest paid?";
             // 
-            // txtbx_times_per_year
+            // label10
             // 
-            this.txtbx_times_per_year.Location = new System.Drawing.Point(417, 72);
-            this.txtbx_times_per_year.Name = "txtbx_times_per_year";
-            this.txtbx_times_per_year.Size = new System.Drawing.Size(167, 26);
-            this.txtbx_times_per_year.TabIndex = 4;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(50, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(150, 20);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Gross Interest Rate";
             // 
-            // lbl_gross_to_aer
+            // tab_loan_repayments
             // 
-            this.lbl_gross_to_aer.AutoSize = true;
-            this.lbl_gross_to_aer.Location = new System.Drawing.Point(73, 185);
-            this.lbl_gross_to_aer.Name = "lbl_gross_to_aer";
-            this.lbl_gross_to_aer.Size = new System.Drawing.Size(104, 20);
-            this.lbl_gross_to_aer.TabIndex = 5;
-            this.lbl_gross_to_aer.Text = "GrossToAER";
+            this.tab_loan_repayments.Controls.Add(this.lbl_monthly_repayments);
+            this.tab_loan_repayments.Controls.Add(this.label14);
+            this.tab_loan_repayments.Controls.Add(this.label13);
+            this.tab_loan_repayments.Controls.Add(this.txtbx_timespan);
+            this.tab_loan_repayments.Controls.Add(this.txtbx_interest_rate);
+            this.tab_loan_repayments.Controls.Add(this.label12);
+            this.tab_loan_repayments.Controls.Add(this.txtbx_loan_amount);
+            this.tab_loan_repayments.Controls.Add(this.btn_calc_loan);
+            this.tab_loan_repayments.Location = new System.Drawing.Point(4, 29);
+            this.tab_loan_repayments.Name = "tab_loan_repayments";
+            this.tab_loan_repayments.Size = new System.Drawing.Size(945, 637);
+            this.tab_loan_repayments.TabIndex = 3;
+            this.tab_loan_repayments.Text = "Loan Repayments";
+            this.tab_loan_repayments.UseVisualStyleBackColor = true;
+            // 
+            // lbl_monthly_repayments
+            // 
+            this.lbl_monthly_repayments.AutoSize = true;
+            this.lbl_monthly_repayments.Location = new System.Drawing.Point(70, 225);
+            this.lbl_monthly_repayments.Name = "lbl_monthly_repayments";
+            this.lbl_monthly_repayments.Size = new System.Drawing.Size(92, 20);
+            this.lbl_monthly_repayments.TabIndex = 7;
+            this.lbl_monthly_repayments.Text = "repayments";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(54, 117);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(145, 20);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Timespan (months)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(54, 85);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(114, 20);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Interest rate %";
+            // 
+            // txtbx_timespan
+            // 
+            this.txtbx_timespan.Location = new System.Drawing.Point(262, 111);
+            this.txtbx_timespan.Name = "txtbx_timespan";
+            this.txtbx_timespan.Size = new System.Drawing.Size(224, 26);
+            this.txtbx_timespan.TabIndex = 4;
+            // 
+            // txtbx_interest_rate
+            // 
+            this.txtbx_interest_rate.Location = new System.Drawing.Point(262, 79);
+            this.txtbx_interest_rate.Name = "txtbx_interest_rate";
+            this.txtbx_interest_rate.Size = new System.Drawing.Size(224, 26);
+            this.txtbx_interest_rate.TabIndex = 3;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(54, 53);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(105, 20);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Loan Amount";
+            // 
+            // txtbx_loan_amount
+            // 
+            this.txtbx_loan_amount.Location = new System.Drawing.Point(262, 47);
+            this.txtbx_loan_amount.Name = "txtbx_loan_amount";
+            this.txtbx_loan_amount.Size = new System.Drawing.Size(224, 26);
+            this.txtbx_loan_amount.TabIndex = 1;
+            // 
+            // btn_calc_loan
+            // 
+            this.btn_calc_loan.Location = new System.Drawing.Point(455, 239);
+            this.btn_calc_loan.Name = "btn_calc_loan";
+            this.btn_calc_loan.Size = new System.Drawing.Size(158, 42);
+            this.btn_calc_loan.TabIndex = 0;
+            this.btn_calc_loan.Text = "Calculate Loan";
+            this.btn_calc_loan.UseVisualStyleBackColor = true;
+            this.btn_calc_loan.Click += new System.EventHandler(this.btn_calc_loan_Click);
             // 
             // Form1
             // 
@@ -434,6 +529,8 @@ namespace Financial_Calculator
             this.tabpg_investment_aer.PerformLayout();
             this.tab_gross_tab.ResumeLayout(false);
             this.tab_gross_tab.PerformLayout();
+            this.tab_loan_repayments.ResumeLayout(false);
+            this.tab_loan_repayments.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -475,6 +572,15 @@ namespace Financial_Calculator
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbl_gross_to_aer;
+        private System.Windows.Forms.TabPage tab_loan_repayments;
+        private System.Windows.Forms.Label lbl_monthly_repayments;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtbx_timespan;
+        private System.Windows.Forms.TextBox txtbx_interest_rate;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtbx_loan_amount;
+        private System.Windows.Forms.Button btn_calc_loan;
     }
 }
 
