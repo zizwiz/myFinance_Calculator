@@ -71,6 +71,16 @@ namespace Financial_Calculator
                 Convert.ToDouble(txtbx_timespan.Text)).ToString("f2");
         }
 
-        
+        private void btn_mortgage_repayments_Click(object sender, EventArgs e)
+        {
+            bool years = true;
+            if (rdobtn_months.Checked) years = false;
+            
+            lbl_mortgage_repayments.Text = "£" + Mortgage.CalculateMortgageRepayments(Convert.ToDouble(txtbx_amount_of_mortgage.Text),
+               Convert.ToDouble(txtbx_mortgage_downpayment.Text),
+                   Convert.ToDouble(txtbx_mortgage_interest.Text),
+               Convert.ToDouble(txtbx_mortgage_timespan.Text),
+               years).ToString("f2");
+        }
     }
 }

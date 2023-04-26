@@ -74,12 +74,27 @@ namespace Financial_Calculator
             this.label12 = new System.Windows.Forms.Label();
             this.txtbx_loan_amount = new System.Windows.Forms.TextBox();
             this.btn_calc_loan = new System.Windows.Forms.Button();
+            this.tab_mortgage_repayments = new System.Windows.Forms.TabPage();
+            this.lbl_mortgage_amount = new System.Windows.Forms.Label();
+            this.btn_mortgage_repayments = new System.Windows.Forms.Button();
+            this.txtbx_amount_of_mortgage = new System.Windows.Forms.TextBox();
+            this.txtbx_mortgage_downpayment = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtbx_mortgage_interest = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtbx_mortgage_timespan = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lbl_mortgage_repayments = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.rdobtn_years = new System.Windows.Forms.RadioButton();
+            this.rdobtn_months = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabpg_compound_interest.SuspendLayout();
             this.tabpg_investment_aer.SuspendLayout();
             this.tab_gross_tab.SuspendLayout();
             this.tab_loan_repayments.SuspendLayout();
+            this.tab_mortgage_repayments.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbx_invest_amount
@@ -245,6 +260,7 @@ namespace Financial_Calculator
             this.tabControl1.Controls.Add(this.tabpg_investment_aer);
             this.tabControl1.Controls.Add(this.tab_gross_tab);
             this.tabControl1.Controls.Add(this.tab_loan_repayments);
+            this.tabControl1.Controls.Add(this.tab_mortgage_repayments);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -510,6 +526,142 @@ namespace Financial_Calculator
             this.btn_calc_loan.UseVisualStyleBackColor = true;
             this.btn_calc_loan.Click += new System.EventHandler(this.btn_calc_loan_Click);
             // 
+            // tab_mortgage_repayments
+            // 
+            this.tab_mortgage_repayments.Controls.Add(this.rdobtn_months);
+            this.tab_mortgage_repayments.Controls.Add(this.rdobtn_years);
+            this.tab_mortgage_repayments.Controls.Add(this.label15);
+            this.tab_mortgage_repayments.Controls.Add(this.lbl_mortgage_repayments);
+            this.tab_mortgage_repayments.Controls.Add(this.txtbx_mortgage_timespan);
+            this.tab_mortgage_repayments.Controls.Add(this.label18);
+            this.tab_mortgage_repayments.Controls.Add(this.txtbx_mortgage_interest);
+            this.tab_mortgage_repayments.Controls.Add(this.label17);
+            this.tab_mortgage_repayments.Controls.Add(this.txtbx_mortgage_downpayment);
+            this.tab_mortgage_repayments.Controls.Add(this.label16);
+            this.tab_mortgage_repayments.Controls.Add(this.txtbx_amount_of_mortgage);
+            this.tab_mortgage_repayments.Controls.Add(this.btn_mortgage_repayments);
+            this.tab_mortgage_repayments.Controls.Add(this.lbl_mortgage_amount);
+            this.tab_mortgage_repayments.Location = new System.Drawing.Point(4, 29);
+            this.tab_mortgage_repayments.Name = "tab_mortgage_repayments";
+            this.tab_mortgage_repayments.Size = new System.Drawing.Size(945, 637);
+            this.tab_mortgage_repayments.TabIndex = 4;
+            this.tab_mortgage_repayments.Text = "Mortgage Repayments";
+            this.tab_mortgage_repayments.UseVisualStyleBackColor = true;
+            // 
+            // lbl_mortgage_amount
+            // 
+            this.lbl_mortgage_amount.AutoSize = true;
+            this.lbl_mortgage_amount.Location = new System.Drawing.Point(63, 66);
+            this.lbl_mortgage_amount.Name = "lbl_mortgage_amount";
+            this.lbl_mortgage_amount.Size = new System.Drawing.Size(117, 20);
+            this.lbl_mortgage_amount.TabIndex = 0;
+            this.lbl_mortgage_amount.Text = "Amount of loan";
+            // 
+            // btn_mortgage_repayments
+            // 
+            this.btn_mortgage_repayments.Location = new System.Drawing.Point(506, 226);
+            this.btn_mortgage_repayments.Name = "btn_mortgage_repayments";
+            this.btn_mortgage_repayments.Size = new System.Drawing.Size(113, 41);
+            this.btn_mortgage_repayments.TabIndex = 1;
+            this.btn_mortgage_repayments.Text = "Mortgage";
+            this.btn_mortgage_repayments.UseVisualStyleBackColor = true;
+            this.btn_mortgage_repayments.Click += new System.EventHandler(this.btn_mortgage_repayments_Click);
+            // 
+            // txtbx_amount_of_mortgage
+            // 
+            this.txtbx_amount_of_mortgage.Location = new System.Drawing.Point(208, 63);
+            this.txtbx_amount_of_mortgage.Name = "txtbx_amount_of_mortgage";
+            this.txtbx_amount_of_mortgage.Size = new System.Drawing.Size(190, 26);
+            this.txtbx_amount_of_mortgage.TabIndex = 2;
+            // 
+            // txtbx_mortgage_downpayment
+            // 
+            this.txtbx_mortgage_downpayment.Location = new System.Drawing.Point(208, 95);
+            this.txtbx_mortgage_downpayment.Name = "txtbx_mortgage_downpayment";
+            this.txtbx_mortgage_downpayment.Size = new System.Drawing.Size(190, 26);
+            this.txtbx_mortgage_downpayment.TabIndex = 4;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(63, 98);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(64, 20);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Deposit";
+            // 
+            // txtbx_mortgage_interest
+            // 
+            this.txtbx_mortgage_interest.Location = new System.Drawing.Point(208, 127);
+            this.txtbx_mortgage_interest.Name = "txtbx_mortgage_interest";
+            this.txtbx_mortgage_interest.Size = new System.Drawing.Size(190, 26);
+            this.txtbx_mortgage_interest.TabIndex = 6;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(63, 130);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(103, 20);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Interest Rate";
+            // 
+            // txtbx_mortgage_timespan
+            // 
+            this.txtbx_mortgage_timespan.Location = new System.Drawing.Point(208, 159);
+            this.txtbx_mortgage_timespan.Name = "txtbx_mortgage_timespan";
+            this.txtbx_mortgage_timespan.Size = new System.Drawing.Size(190, 26);
+            this.txtbx_mortgage_timespan.TabIndex = 8;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(63, 162);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(117, 20);
+            this.label18.TabIndex = 7;
+            this.label18.Text = "Mortgage Term";
+            // 
+            // lbl_mortgage_repayments
+            // 
+            this.lbl_mortgage_repayments.AutoSize = true;
+            this.lbl_mortgage_repayments.Location = new System.Drawing.Point(63, 236);
+            this.lbl_mortgage_repayments.Name = "lbl_mortgage_repayments";
+            this.lbl_mortgage_repayments.Size = new System.Drawing.Size(159, 20);
+            this.lbl_mortgage_repayments.TabIndex = 9;
+            this.lbl_mortgage_repayments.Text = "MortgageRepayment";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(404, 130);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(23, 20);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "%";
+            // 
+            // rdobtn_years
+            // 
+            this.rdobtn_years.AutoSize = true;
+            this.rdobtn_years.Checked = true;
+            this.rdobtn_years.Location = new System.Drawing.Point(404, 160);
+            this.rdobtn_years.Name = "rdobtn_years";
+            this.rdobtn_years.Size = new System.Drawing.Size(76, 24);
+            this.rdobtn_years.TabIndex = 11;
+            this.rdobtn_years.TabStop = true;
+            this.rdobtn_years.Text = "Years";
+            this.rdobtn_years.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_months
+            // 
+            this.rdobtn_months.AutoSize = true;
+            this.rdobtn_months.Location = new System.Drawing.Point(486, 160);
+            this.rdobtn_months.Name = "rdobtn_months";
+            this.rdobtn_months.Size = new System.Drawing.Size(87, 24);
+            this.rdobtn_months.TabIndex = 12;
+            this.rdobtn_months.Text = "Months";
+            this.rdobtn_months.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -531,6 +683,8 @@ namespace Financial_Calculator
             this.tab_gross_tab.PerformLayout();
             this.tab_loan_repayments.ResumeLayout(false);
             this.tab_loan_repayments.PerformLayout();
+            this.tab_mortgage_repayments.ResumeLayout(false);
+            this.tab_mortgage_repayments.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -581,6 +735,20 @@ namespace Financial_Calculator
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtbx_loan_amount;
         private System.Windows.Forms.Button btn_calc_loan;
+        private System.Windows.Forms.TabPage tab_mortgage_repayments;
+        private System.Windows.Forms.Label lbl_mortgage_repayments;
+        private System.Windows.Forms.TextBox txtbx_mortgage_timespan;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtbx_mortgage_interest;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtbx_mortgage_downpayment;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtbx_amount_of_mortgage;
+        private System.Windows.Forms.Button btn_mortgage_repayments;
+        private System.Windows.Forms.Label lbl_mortgage_amount;
+        private System.Windows.Forms.RadioButton rdobtn_months;
+        private System.Windows.Forms.RadioButton rdobtn_years;
+        private System.Windows.Forms.Label label15;
     }
 }
 
