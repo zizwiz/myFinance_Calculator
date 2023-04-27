@@ -88,6 +88,11 @@ namespace Financial_Calculator
             this.label15 = new System.Windows.Forms.Label();
             this.rdobtn_years = new System.Windows.Forms.RadioButton();
             this.rdobtn_months = new System.Windows.Forms.RadioButton();
+            this.lbl_total_repaid = new System.Windows.Forms.Label();
+            this.lbl_total_interest = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabpg_compound_interest.SuspendLayout();
@@ -528,6 +533,11 @@ namespace Financial_Calculator
             // 
             // tab_mortgage_repayments
             // 
+            this.tab_mortgage_repayments.Controls.Add(this.label23);
+            this.tab_mortgage_repayments.Controls.Add(this.label22);
+            this.tab_mortgage_repayments.Controls.Add(this.label21);
+            this.tab_mortgage_repayments.Controls.Add(this.lbl_total_interest);
+            this.tab_mortgage_repayments.Controls.Add(this.lbl_total_repaid);
             this.tab_mortgage_repayments.Controls.Add(this.rdobtn_months);
             this.tab_mortgage_repayments.Controls.Add(this.rdobtn_years);
             this.tab_mortgage_repayments.Controls.Add(this.label15);
@@ -625,11 +635,11 @@ namespace Financial_Calculator
             // lbl_mortgage_repayments
             // 
             this.lbl_mortgage_repayments.AutoSize = true;
-            this.lbl_mortgage_repayments.Location = new System.Drawing.Point(63, 236);
+            this.lbl_mortgage_repayments.Location = new System.Drawing.Point(217, 228);
             this.lbl_mortgage_repayments.Name = "lbl_mortgage_repayments";
-            this.lbl_mortgage_repayments.Size = new System.Drawing.Size(159, 20);
+            this.lbl_mortgage_repayments.Size = new System.Drawing.Size(17, 20);
             this.lbl_mortgage_repayments.TabIndex = 9;
-            this.lbl_mortgage_repayments.Text = "MortgageRepayment";
+            this.lbl_mortgage_repayments.Text = "..";
             // 
             // label15
             // 
@@ -661,6 +671,51 @@ namespace Financial_Calculator
             this.rdobtn_months.TabIndex = 12;
             this.rdobtn_months.Text = "Months";
             this.rdobtn_months.UseVisualStyleBackColor = true;
+            // 
+            // lbl_total_repaid
+            // 
+            this.lbl_total_repaid.AutoSize = true;
+            this.lbl_total_repaid.Location = new System.Drawing.Point(217, 268);
+            this.lbl_total_repaid.Name = "lbl_total_repaid";
+            this.lbl_total_repaid.Size = new System.Drawing.Size(17, 20);
+            this.lbl_total_repaid.TabIndex = 13;
+            this.lbl_total_repaid.Text = "..";
+            // 
+            // lbl_total_interest
+            // 
+            this.lbl_total_interest.AutoSize = true;
+            this.lbl_total_interest.Location = new System.Drawing.Point(217, 314);
+            this.lbl_total_interest.Name = "lbl_total_interest";
+            this.lbl_total_interest.Size = new System.Drawing.Size(17, 20);
+            this.lbl_total_interest.TabIndex = 14;
+            this.lbl_total_interest.Text = "..";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(63, 228);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(151, 20);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "Monthly repayments";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(63, 268);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(99, 20);
+            this.label22.TabIndex = 16;
+            this.label22.Text = "Total Repaid";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(63, 314);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(103, 20);
+            this.label23.TabIndex = 17;
+            this.label23.Text = "Total Interest";
             // 
             // Form1
             // 
@@ -749,6 +804,11 @@ namespace Financial_Calculator
         private System.Windows.Forms.RadioButton rdobtn_months;
         private System.Windows.Forms.RadioButton rdobtn_years;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lbl_total_interest;
+        private System.Windows.Forms.Label lbl_total_repaid;
     }
 }
 
