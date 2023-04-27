@@ -75,24 +75,37 @@ namespace Financial_Calculator
             this.txtbx_loan_amount = new System.Windows.Forms.TextBox();
             this.btn_calc_loan = new System.Windows.Forms.Button();
             this.tab_mortgage_repayments = new System.Windows.Forms.TabPage();
-            this.lbl_mortgage_amount = new System.Windows.Forms.Label();
-            this.btn_mortgage_repayments = new System.Windows.Forms.Button();
-            this.txtbx_amount_of_mortgage = new System.Windows.Forms.TextBox();
-            this.txtbx_mortgage_downpayment = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtbx_mortgage_interest = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lbl_total_interest = new System.Windows.Forms.Label();
+            this.lbl_total_repaid = new System.Windows.Forms.Label();
+            this.rdobtn_months = new System.Windows.Forms.RadioButton();
+            this.rdobtn_years = new System.Windows.Forms.RadioButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lbl_mortgage_repayments = new System.Windows.Forms.Label();
             this.txtbx_mortgage_timespan = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.lbl_mortgage_repayments = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.rdobtn_years = new System.Windows.Forms.RadioButton();
-            this.rdobtn_months = new System.Windows.Forms.RadioButton();
-            this.lbl_total_repaid = new System.Windows.Forms.Label();
-            this.lbl_total_interest = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.txtbx_mortgage_interest = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtbx_mortgage_downpayment = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtbx_amount_of_mortgage = new System.Windows.Forms.TextBox();
+            this.btn_mortgage_repayments = new System.Windows.Forms.Button();
+            this.lbl_mortgage_amount = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.lbl_total_compound_interest = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.lbl_profit_made = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.lbl_total_interest_paid = new System.Windows.Forms.Label();
+            this.lbl_total_loan_repaid = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabpg_compound_interest.SuspendLayout();
@@ -136,11 +149,11 @@ namespace Financial_Calculator
             // lbl_result
             // 
             this.lbl_result.AutoSize = true;
-            this.lbl_result.Location = new System.Drawing.Point(549, 511);
+            this.lbl_result.Location = new System.Drawing.Point(130, 345);
             this.lbl_result.Name = "lbl_result";
-            this.lbl_result.Size = new System.Drawing.Size(55, 20);
+            this.lbl_result.Size = new System.Drawing.Size(17, 20);
             this.lbl_result.TabIndex = 6;
-            this.lbl_result.Text = "Result";
+            this.lbl_result.Text = "..";
             // 
             // label1
             // 
@@ -253,11 +266,11 @@ namespace Financial_Calculator
             // lbl_tax
             // 
             this.lbl_tax.AutoSize = true;
-            this.lbl_tax.Location = new System.Drawing.Point(18, 524);
+            this.lbl_tax.Location = new System.Drawing.Point(130, 306);
             this.lbl_tax.Name = "lbl_tax";
-            this.lbl_tax.Size = new System.Drawing.Size(34, 20);
+            this.lbl_tax.Size = new System.Drawing.Size(17, 20);
             this.lbl_tax.TabIndex = 19;
-            this.lbl_tax.Text = "Tax";
+            this.lbl_tax.Text = "..";
             // 
             // tabControl1
             // 
@@ -275,6 +288,10 @@ namespace Financial_Calculator
             // 
             // tabpg_compound_interest
             // 
+            this.tabpg_compound_interest.Controls.Add(this.label24);
+            this.tabpg_compound_interest.Controls.Add(this.lbl_total_compound_interest);
+            this.tabpg_compound_interest.Controls.Add(this.label20);
+            this.tabpg_compound_interest.Controls.Add(this.label19);
             this.tabpg_compound_interest.Controls.Add(this.txtbx_invest_amount);
             this.tabpg_compound_interest.Controls.Add(this.lbl_tax);
             this.tabpg_compound_interest.Controls.Add(this.txtbx_invest_term);
@@ -298,6 +315,9 @@ namespace Financial_Calculator
             // 
             // tabpg_investment_aer
             // 
+            this.tabpg_investment_aer.Controls.Add(this.label26);
+            this.tabpg_investment_aer.Controls.Add(this.lbl_profit_made);
+            this.tabpg_investment_aer.Controls.Add(this.label25);
             this.tabpg_investment_aer.Controls.Add(this.lbl_invest_return);
             this.tabpg_investment_aer.Controls.Add(this.btn_calc_invest_rtn);
             this.tabpg_investment_aer.Controls.Add(this.label9);
@@ -317,15 +337,15 @@ namespace Financial_Calculator
             // lbl_invest_return
             // 
             this.lbl_invest_return.AutoSize = true;
-            this.lbl_invest_return.Location = new System.Drawing.Point(31, 229);
+            this.lbl_invest_return.Location = new System.Drawing.Point(217, 229);
             this.lbl_invest_return.Name = "lbl_invest_return";
-            this.lbl_invest_return.Size = new System.Drawing.Size(76, 20);
+            this.lbl_invest_return.Size = new System.Drawing.Size(21, 20);
             this.lbl_invest_return.TabIndex = 8;
-            this.lbl_invest_return.Text = "% Return";
+            this.lbl_invest_return.Text = "...";
             // 
             // btn_calc_invest_rtn
             // 
-            this.btn_calc_invest_rtn.Location = new System.Drawing.Point(347, 286);
+            this.btn_calc_invest_rtn.Location = new System.Drawing.Point(457, 220);
             this.btn_calc_invest_rtn.Name = "btn_calc_invest_rtn";
             this.btn_calc_invest_rtn.Size = new System.Drawing.Size(117, 39);
             this.btn_calc_invest_rtn.TabIndex = 7;
@@ -383,6 +403,7 @@ namespace Financial_Calculator
             // 
             // tab_gross_tab
             // 
+            this.tab_gross_tab.Controls.Add(this.label27);
             this.tab_gross_tab.Controls.Add(this.lbl_gross_to_aer);
             this.tab_gross_tab.Controls.Add(this.txtbx_times_per_year);
             this.tab_gross_tab.Controls.Add(this.txtbx_gross_int_rate);
@@ -399,11 +420,11 @@ namespace Financial_Calculator
             // lbl_gross_to_aer
             // 
             this.lbl_gross_to_aer.AutoSize = true;
-            this.lbl_gross_to_aer.Location = new System.Drawing.Point(73, 185);
+            this.lbl_gross_to_aer.Location = new System.Drawing.Point(146, 185);
             this.lbl_gross_to_aer.Name = "lbl_gross_to_aer";
-            this.lbl_gross_to_aer.Size = new System.Drawing.Size(104, 20);
+            this.lbl_gross_to_aer.Size = new System.Drawing.Size(17, 20);
             this.lbl_gross_to_aer.TabIndex = 5;
-            this.lbl_gross_to_aer.Text = "GrossToAER";
+            this.lbl_gross_to_aer.Text = "..";
             // 
             // txtbx_times_per_year
             // 
@@ -449,6 +470,11 @@ namespace Financial_Calculator
             // 
             // tab_loan_repayments
             // 
+            this.tab_loan_repayments.Controls.Add(this.label28);
+            this.tab_loan_repayments.Controls.Add(this.label29);
+            this.tab_loan_repayments.Controls.Add(this.label30);
+            this.tab_loan_repayments.Controls.Add(this.lbl_total_interest_paid);
+            this.tab_loan_repayments.Controls.Add(this.lbl_total_loan_repaid);
             this.tab_loan_repayments.Controls.Add(this.lbl_monthly_repayments);
             this.tab_loan_repayments.Controls.Add(this.label14);
             this.tab_loan_repayments.Controls.Add(this.label13);
@@ -467,11 +493,11 @@ namespace Financial_Calculator
             // lbl_monthly_repayments
             // 
             this.lbl_monthly_repayments.AutoSize = true;
-            this.lbl_monthly_repayments.Location = new System.Drawing.Point(70, 225);
+            this.lbl_monthly_repayments.Location = new System.Drawing.Point(221, 209);
             this.lbl_monthly_repayments.Name = "lbl_monthly_repayments";
-            this.lbl_monthly_repayments.Size = new System.Drawing.Size(92, 20);
+            this.lbl_monthly_repayments.Size = new System.Drawing.Size(17, 20);
             this.lbl_monthly_repayments.TabIndex = 7;
-            this.lbl_monthly_repayments.Text = "repayments";
+            this.lbl_monthly_repayments.Text = "..";
             // 
             // label14
             // 
@@ -558,63 +584,90 @@ namespace Financial_Calculator
             this.tab_mortgage_repayments.Text = "Mortgage Repayments";
             this.tab_mortgage_repayments.UseVisualStyleBackColor = true;
             // 
-            // lbl_mortgage_amount
+            // label23
             // 
-            this.lbl_mortgage_amount.AutoSize = true;
-            this.lbl_mortgage_amount.Location = new System.Drawing.Point(63, 66);
-            this.lbl_mortgage_amount.Name = "lbl_mortgage_amount";
-            this.lbl_mortgage_amount.Size = new System.Drawing.Size(117, 20);
-            this.lbl_mortgage_amount.TabIndex = 0;
-            this.lbl_mortgage_amount.Text = "Amount of loan";
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(63, 314);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(103, 20);
+            this.label23.TabIndex = 17;
+            this.label23.Text = "Total Interest";
             // 
-            // btn_mortgage_repayments
+            // label22
             // 
-            this.btn_mortgage_repayments.Location = new System.Drawing.Point(506, 226);
-            this.btn_mortgage_repayments.Name = "btn_mortgage_repayments";
-            this.btn_mortgage_repayments.Size = new System.Drawing.Size(113, 41);
-            this.btn_mortgage_repayments.TabIndex = 1;
-            this.btn_mortgage_repayments.Text = "Mortgage";
-            this.btn_mortgage_repayments.UseVisualStyleBackColor = true;
-            this.btn_mortgage_repayments.Click += new System.EventHandler(this.btn_mortgage_repayments_Click);
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(63, 268);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(99, 20);
+            this.label22.TabIndex = 16;
+            this.label22.Text = "Total Repaid";
             // 
-            // txtbx_amount_of_mortgage
+            // label21
             // 
-            this.txtbx_amount_of_mortgage.Location = new System.Drawing.Point(208, 63);
-            this.txtbx_amount_of_mortgage.Name = "txtbx_amount_of_mortgage";
-            this.txtbx_amount_of_mortgage.Size = new System.Drawing.Size(190, 26);
-            this.txtbx_amount_of_mortgage.TabIndex = 2;
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(63, 228);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(151, 20);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "Monthly repayments";
             // 
-            // txtbx_mortgage_downpayment
+            // lbl_total_interest
             // 
-            this.txtbx_mortgage_downpayment.Location = new System.Drawing.Point(208, 95);
-            this.txtbx_mortgage_downpayment.Name = "txtbx_mortgage_downpayment";
-            this.txtbx_mortgage_downpayment.Size = new System.Drawing.Size(190, 26);
-            this.txtbx_mortgage_downpayment.TabIndex = 4;
+            this.lbl_total_interest.AutoSize = true;
+            this.lbl_total_interest.Location = new System.Drawing.Point(217, 314);
+            this.lbl_total_interest.Name = "lbl_total_interest";
+            this.lbl_total_interest.Size = new System.Drawing.Size(17, 20);
+            this.lbl_total_interest.TabIndex = 14;
+            this.lbl_total_interest.Text = "..";
             // 
-            // label16
+            // lbl_total_repaid
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(63, 98);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(64, 20);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Deposit";
+            this.lbl_total_repaid.AutoSize = true;
+            this.lbl_total_repaid.Location = new System.Drawing.Point(217, 268);
+            this.lbl_total_repaid.Name = "lbl_total_repaid";
+            this.lbl_total_repaid.Size = new System.Drawing.Size(17, 20);
+            this.lbl_total_repaid.TabIndex = 13;
+            this.lbl_total_repaid.Text = "..";
             // 
-            // txtbx_mortgage_interest
+            // rdobtn_months
             // 
-            this.txtbx_mortgage_interest.Location = new System.Drawing.Point(208, 127);
-            this.txtbx_mortgage_interest.Name = "txtbx_mortgage_interest";
-            this.txtbx_mortgage_interest.Size = new System.Drawing.Size(190, 26);
-            this.txtbx_mortgage_interest.TabIndex = 6;
+            this.rdobtn_months.AutoSize = true;
+            this.rdobtn_months.Location = new System.Drawing.Point(486, 160);
+            this.rdobtn_months.Name = "rdobtn_months";
+            this.rdobtn_months.Size = new System.Drawing.Size(87, 24);
+            this.rdobtn_months.TabIndex = 12;
+            this.rdobtn_months.Text = "Months";
+            this.rdobtn_months.UseVisualStyleBackColor = true;
             // 
-            // label17
+            // rdobtn_years
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(63, 130);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(103, 20);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Interest Rate";
+            this.rdobtn_years.AutoSize = true;
+            this.rdobtn_years.Checked = true;
+            this.rdobtn_years.Location = new System.Drawing.Point(404, 160);
+            this.rdobtn_years.Name = "rdobtn_years";
+            this.rdobtn_years.Size = new System.Drawing.Size(76, 24);
+            this.rdobtn_years.TabIndex = 11;
+            this.rdobtn_years.TabStop = true;
+            this.rdobtn_years.Text = "Years";
+            this.rdobtn_years.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(404, 130);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(23, 20);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "%";
+            // 
+            // lbl_mortgage_repayments
+            // 
+            this.lbl_mortgage_repayments.AutoSize = true;
+            this.lbl_mortgage_repayments.Location = new System.Drawing.Point(217, 228);
+            this.lbl_mortgage_repayments.Name = "lbl_mortgage_repayments";
+            this.lbl_mortgage_repayments.Size = new System.Drawing.Size(17, 20);
+            this.lbl_mortgage_repayments.TabIndex = 9;
+            this.lbl_mortgage_repayments.Text = "..";
             // 
             // txtbx_mortgage_timespan
             // 
@@ -632,90 +685,180 @@ namespace Financial_Calculator
             this.label18.TabIndex = 7;
             this.label18.Text = "Mortgage Term";
             // 
-            // lbl_mortgage_repayments
+            // txtbx_mortgage_interest
             // 
-            this.lbl_mortgage_repayments.AutoSize = true;
-            this.lbl_mortgage_repayments.Location = new System.Drawing.Point(217, 228);
-            this.lbl_mortgage_repayments.Name = "lbl_mortgage_repayments";
-            this.lbl_mortgage_repayments.Size = new System.Drawing.Size(17, 20);
-            this.lbl_mortgage_repayments.TabIndex = 9;
-            this.lbl_mortgage_repayments.Text = "..";
+            this.txtbx_mortgage_interest.Location = new System.Drawing.Point(208, 127);
+            this.txtbx_mortgage_interest.Name = "txtbx_mortgage_interest";
+            this.txtbx_mortgage_interest.Size = new System.Drawing.Size(190, 26);
+            this.txtbx_mortgage_interest.TabIndex = 6;
             // 
-            // label15
+            // label17
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(404, 130);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(23, 20);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "%";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(63, 130);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(103, 20);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Interest Rate";
             // 
-            // rdobtn_years
+            // txtbx_mortgage_downpayment
             // 
-            this.rdobtn_years.AutoSize = true;
-            this.rdobtn_years.Checked = true;
-            this.rdobtn_years.Location = new System.Drawing.Point(404, 160);
-            this.rdobtn_years.Name = "rdobtn_years";
-            this.rdobtn_years.Size = new System.Drawing.Size(76, 24);
-            this.rdobtn_years.TabIndex = 11;
-            this.rdobtn_years.TabStop = true;
-            this.rdobtn_years.Text = "Years";
-            this.rdobtn_years.UseVisualStyleBackColor = true;
+            this.txtbx_mortgage_downpayment.Location = new System.Drawing.Point(208, 95);
+            this.txtbx_mortgage_downpayment.Name = "txtbx_mortgage_downpayment";
+            this.txtbx_mortgage_downpayment.Size = new System.Drawing.Size(190, 26);
+            this.txtbx_mortgage_downpayment.TabIndex = 4;
             // 
-            // rdobtn_months
+            // label16
             // 
-            this.rdobtn_months.AutoSize = true;
-            this.rdobtn_months.Location = new System.Drawing.Point(486, 160);
-            this.rdobtn_months.Name = "rdobtn_months";
-            this.rdobtn_months.Size = new System.Drawing.Size(87, 24);
-            this.rdobtn_months.TabIndex = 12;
-            this.rdobtn_months.Text = "Months";
-            this.rdobtn_months.UseVisualStyleBackColor = true;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(63, 98);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(64, 20);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Deposit";
             // 
-            // lbl_total_repaid
+            // txtbx_amount_of_mortgage
             // 
-            this.lbl_total_repaid.AutoSize = true;
-            this.lbl_total_repaid.Location = new System.Drawing.Point(217, 268);
-            this.lbl_total_repaid.Name = "lbl_total_repaid";
-            this.lbl_total_repaid.Size = new System.Drawing.Size(17, 20);
-            this.lbl_total_repaid.TabIndex = 13;
-            this.lbl_total_repaid.Text = "..";
+            this.txtbx_amount_of_mortgage.Location = new System.Drawing.Point(208, 63);
+            this.txtbx_amount_of_mortgage.Name = "txtbx_amount_of_mortgage";
+            this.txtbx_amount_of_mortgage.Size = new System.Drawing.Size(190, 26);
+            this.txtbx_amount_of_mortgage.TabIndex = 2;
             // 
-            // lbl_total_interest
+            // btn_mortgage_repayments
             // 
-            this.lbl_total_interest.AutoSize = true;
-            this.lbl_total_interest.Location = new System.Drawing.Point(217, 314);
-            this.lbl_total_interest.Name = "lbl_total_interest";
-            this.lbl_total_interest.Size = new System.Drawing.Size(17, 20);
-            this.lbl_total_interest.TabIndex = 14;
-            this.lbl_total_interest.Text = "..";
+            this.btn_mortgage_repayments.Location = new System.Drawing.Point(506, 226);
+            this.btn_mortgage_repayments.Name = "btn_mortgage_repayments";
+            this.btn_mortgage_repayments.Size = new System.Drawing.Size(113, 41);
+            this.btn_mortgage_repayments.TabIndex = 1;
+            this.btn_mortgage_repayments.Text = "Mortgage";
+            this.btn_mortgage_repayments.UseVisualStyleBackColor = true;
+            this.btn_mortgage_repayments.Click += new System.EventHandler(this.btn_mortgage_repayments_Click);
             // 
-            // label21
+            // lbl_mortgage_amount
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(63, 228);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(151, 20);
-            this.label21.TabIndex = 15;
-            this.label21.Text = "Monthly repayments";
+            this.lbl_mortgage_amount.AutoSize = true;
+            this.lbl_mortgage_amount.Location = new System.Drawing.Point(63, 66);
+            this.lbl_mortgage_amount.Name = "lbl_mortgage_amount";
+            this.lbl_mortgage_amount.Size = new System.Drawing.Size(117, 20);
+            this.lbl_mortgage_amount.TabIndex = 0;
+            this.lbl_mortgage_amount.Text = "Amount of loan";
             // 
-            // label22
+            // label19
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(63, 268);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(99, 20);
-            this.label22.TabIndex = 16;
-            this.label22.Text = "Total Repaid";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(18, 306);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(78, 20);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "Tax Payer";
             // 
-            // label23
+            // label20
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(63, 314);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(103, 20);
-            this.label23.TabIndex = 17;
-            this.label23.Text = "Total Interest";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(18, 345);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(89, 20);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "Total Value";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(18, 384);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(103, 20);
+            this.label24.TabIndex = 23;
+            this.label24.Text = "Total Interest";
+            // 
+            // lbl_total_compound_interest
+            // 
+            this.lbl_total_compound_interest.AutoSize = true;
+            this.lbl_total_compound_interest.Location = new System.Drawing.Point(130, 384);
+            this.lbl_total_compound_interest.Name = "lbl_total_compound_interest";
+            this.lbl_total_compound_interest.Size = new System.Drawing.Size(17, 20);
+            this.lbl_total_compound_interest.TabIndex = 22;
+            this.lbl_total_compound_interest.Text = "..";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(31, 229);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(163, 20);
+            this.label25.TabIndex = 9;
+            this.label25.Text = "Return on Investment";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(31, 265);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(90, 20);
+            this.label26.TabIndex = 11;
+            this.label26.Text = "Profit made";
+            // 
+            // lbl_profit_made
+            // 
+            this.lbl_profit_made.AutoSize = true;
+            this.lbl_profit_made.Location = new System.Drawing.Point(217, 265);
+            this.lbl_profit_made.Name = "lbl_profit_made";
+            this.lbl_profit_made.Size = new System.Drawing.Size(21, 20);
+            this.lbl_profit_made.TabIndex = 10;
+            this.lbl_profit_made.Text = "...";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(50, 185);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(75, 20);
+            this.label27.TabIndex = 6;
+            this.label27.Text = "AER rate";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(54, 295);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(103, 20);
+            this.label28.TabIndex = 23;
+            this.label28.Text = "Total Interest";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(54, 249);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(99, 20);
+            this.label29.TabIndex = 22;
+            this.label29.Text = "Total Repaid";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(54, 209);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(151, 20);
+            this.label30.TabIndex = 21;
+            this.label30.Text = "Monthly repayments";
+            // 
+            // lbl_total_interest_paid
+            // 
+            this.lbl_total_interest_paid.AutoSize = true;
+            this.lbl_total_interest_paid.Location = new System.Drawing.Point(221, 295);
+            this.lbl_total_interest_paid.Name = "lbl_total_interest_paid";
+            this.lbl_total_interest_paid.Size = new System.Drawing.Size(17, 20);
+            this.lbl_total_interest_paid.TabIndex = 20;
+            this.lbl_total_interest_paid.Text = "..";
+            // 
+            // lbl_total_loan_repaid
+            // 
+            this.lbl_total_loan_repaid.AutoSize = true;
+            this.lbl_total_loan_repaid.Location = new System.Drawing.Point(221, 250);
+            this.lbl_total_loan_repaid.Name = "lbl_total_loan_repaid";
+            this.lbl_total_loan_repaid.Size = new System.Drawing.Size(17, 20);
+            this.lbl_total_loan_repaid.TabIndex = 19;
+            this.lbl_total_loan_repaid.Text = "..";
             // 
             // Form1
             // 
@@ -809,6 +952,19 @@ namespace Financial_Calculator
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label lbl_total_interest;
         private System.Windows.Forms.Label lbl_total_repaid;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lbl_total_compound_interest;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lbl_profit_made;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lbl_total_interest_paid;
+        private System.Windows.Forms.Label lbl_total_loan_repaid;
     }
 }
 

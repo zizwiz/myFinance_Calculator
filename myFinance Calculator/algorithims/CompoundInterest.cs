@@ -6,8 +6,14 @@ namespace Financial_Calculator.algorithims
     {
         /// <summary>
         /// CompoundInterest.
+        /// Invest = 10000
+        /// interest = 15%
+        /// Term = 20years
+        /// Int calculated once a year
+        ///
+        /// value = 163 665.37
         /// </summary>
-        public static (double, bool) CompoundInterestCalc(double principal,
+        public static (double, bool, double) CompoundInterestCalc(double InitialInvestmentValue,
             double interestRate,
             int timesPerYear,
             double years)
@@ -24,15 +30,16 @@ namespace Financial_Calculator.algorithims
             double exponent = timesPerYear * years;
 
             // P(1 + r/n)^nt
-            double total = principal * Math.Pow(body, exponent);
+            double FinalValue = InitialInvestmentValue * Math.Pow(body, exponent);
+            double TotalInterest = FinalValue - InitialInvestmentValue;
 
 
             //You pay tax on interest over £1000.00
-            if (total - principal > 1000) flag = true; //Paying tax
+            if (FinalValue - InitialInvestmentValue > 1000) flag = true; //Paying tax
 
 
 
-            return (total, flag);
+            return (FinalValue, flag, TotalInterest);
 
 
 

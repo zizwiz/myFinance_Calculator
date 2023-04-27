@@ -9,7 +9,7 @@ namespace myFinance_Calculator.algorithims
     class CalcLoanRepayments
     {
 
-        public static double CalculateMonthlyRepayments(double LoanAmount, double InterestRate, double RepaymentTimeSpan)
+        public static (double, double, double) CalculateMonthlyRepayments(double LoanAmount, double InterestRate, double RepaymentTimeSpan)
         {
             /*
              *
@@ -29,15 +29,13 @@ namespace myFinance_Calculator.algorithims
              *
              */
 
+            double monthlyPayments = LoanAmount * (InterestRate / 1200) / (1 - (1 / Math.Pow((1 + InterestRate / 1200), RepaymentTimeSpan)));
+            double TotalRepaid = monthlyPayments * RepaymentTimeSpan;
+            double TotalInterest = TotalRepaid - LoanAmount;
 
 
+            return  (monthlyPayments, TotalRepaid, TotalInterest);
 
-
-            return LoanAmount * (InterestRate / 1200) / (1 - (1 / Math.Pow((1 + InterestRate / 1200), RepaymentTimeSpan)));
-
-
-
-            
         }
 
 

@@ -41,17 +41,17 @@ namespace Financial_Calculator
                 interval,
                 double.Parse(txtbx_invest_term.Text)); //currency string.
 
-
-            if (data.Item2) lbl_tax.Text = "PayingTax";
-
-            lbl_result.Text = data.Item1.ToString("C");
+            lbl_tax.Text = (data.Item2)?"Yes":"No"; //do you pay tax on interest
+            lbl_result.Text = "£" + data.Item1.ToString("### ### ### ### ##0.00");
+            lbl_total_compound_interest.Text = "£" + data.Item3.ToString("### ### ### ### ##0.00");
         }
 
         private void btn_calc_invest_rtn_Click(object sender, EventArgs e)
         {
-            lbl_invest_return.Text = "Percentage return = " +
-                                     ROI.CalculateROIChange(float.Parse(txtbx_initial_investment.Text), float.Parse(txtbx_value_now.Text), double.Parse(txtbx_invest_timespan.Text) ).ToString("0.##")
-                                     +"%";
+            var data = ROI.CalculateROIChange(float.Parse(txtbx_initial_investment.Text), float.Parse(txtbx_value_now.Text), double.Parse(txtbx_invest_timespan.Text) );
+
+            lbl_invest_return.Text = "Percentage return = " + data.Item1.ToString("0.##") + "%";
+            lbl_profit_made.Text = "£" + data.Item2.ToString("### ### ### ### ##0.00");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -61,14 +61,19 @@ namespace Financial_Calculator
 
         private void btn_calculate_gross_to_aer_Click(object sender, EventArgs e)
         {
-            lbl_gross_to_aer.Text = GrossToAER.CalculateGrossToAER(float.Parse(txtbx_gross_int_rate.Text), int.Parse(txtbx_times_per_year.Text)).ToString("0.##");
+            lbl_gross_to_aer.Text = GrossToAER.CalculateGrossToAER(float.Parse(txtbx_gross_int_rate.Text), int.Parse(txtbx_times_per_year.Text)).ToString("0.##") + "%";
         }
 
         private void btn_calc_loan_Click(object sender, EventArgs e)
         {
-            lbl_monthly_repayments.Text = "£" + CalcLoanRepayments.CalculateMonthlyRepayments(Convert.ToDouble(txtbx_loan_amount.Text),
+            var data = CalcLoanRepayments.CalculateMonthlyRepayments(Convert.ToDouble(txtbx_loan_amount.Text),
                 Convert.ToDouble(txtbx_interest_rate.Text),
-                Convert.ToDouble(txtbx_timespan.Text)).ToString("f2");
+                Convert.ToDouble(txtbx_timespan.Text));
+
+
+            lbl_monthly_repayments.Text = "£" + data.Item1.ToString("### ### ### ### ##0.00");
+            lbl_total_loan_repaid.Text = "£" + data.Item2.ToString("### ### ### ### ##0.00");
+            lbl_total_interest_paid.Text = "£" + data.Item3.ToString("### ### ### ### ##0.00");
         }
 
         private void btn_mortgage_repayments_Click(object sender, EventArgs e)
